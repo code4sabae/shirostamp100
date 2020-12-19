@@ -37,9 +37,10 @@ const replaceLink = (s) => {
 
 const apname = "shirostamp100";
 
-const getCredit = (num, path) => {
+const getCredit = (path) => {
+  const num = 3068;
   return `<div class=credit>
-  <div>App: <a href=https://fukuno.jig.jp/${num}>福野泰介の一日一創</a> (<a href=https://github.com/code4sabae/c${apname}/>src on GitHub</a>)</div>
+  <div>App: <a href=https://fukuno.jig.jp/${num}>福野泰介の一日一創</a> (<a href=https://github.com/code4sabae/${apname}/>src on GitHub</a>)</div>
   <div>Data: <a href=http://linkdata.org/work/rdf1s6866i>100名城リスト｜オープンデータ共有＆ダウンロード｜LinkData</a> → <a href=${path}/100castles.csv>CSV UTF-8 with image/icon</a></div>
   <div>Illust: <a href=https://www.irasutoya.com/>いらすとや</a></div>
   </div>
@@ -79,7 +80,7 @@ ${divs.join("\n")}<br>
 <a href=../index.html>一覧に戻る</a>
 <hr>
 <div class=credit>
-${getCredit(3068, "..")}
+${getCredit("..")}
 </div>
 `;
   await Deno.writeTextFile(path + "/" + d["100castles"] + ".html", html);
@@ -120,7 +121,7 @@ const indexhtml =
 
 <div id="main">${divs2.join("\n")}</div>
 <hr>
-${getCredit(3068, "")}
+${getCredit("")}
 </body>
 </html>`;
 
