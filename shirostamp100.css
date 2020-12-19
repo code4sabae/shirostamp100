@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+}
+h1 {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  margin: 0 0 0 0;
+  padding: .5em .5em;
+  font-size: 5vw;
+  line-height: 1.8em;
+}
+.data {
+  margin: .8em;
+  padding: 0;
+  border: 1px solid #777;
+  background-color: #fff;
+  font-size: 80%;
+}
+.data h2 {
+  font-size: 120%;
+  background-color: #777;
+  margin: 0 0 0 0;
+  padding: .2em;
+  color: white;
+}
+.data div {
+  white-space: pre-wrap;
+  padding: .4em;
+}
+a {
+  color: gray !important;
+}
+
+input[type=text] {
+  width: 80vw;
+  font-size: 110%;
+  padding: .5em .3em;
+  margin: .8em;
+}
+#filtered {
+  margin: 0 0 .8em 1.6em;
+  font-size: 80%;
+}
+#main {
+  margin: 0 .8em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+#main > div {
+  padding: 0 .5em .5em .5em;
+}
+.list h2 {
+  font-size: 90%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+.list div {
+  white-space: pre-wrap;
+  font-size: 70%;
+  color: gray;
+  x-margin-left: 1em;
+  x-margin-bottom: 1em;
+}
+input[type=checkbox] {
+  display: none;
+  /* -webkit-appearance: none; -moz-appearance: none; appearance: none;  */
+}
+.checkbox02 {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 30px;
+  position: relative;
+  width: auto;
+}
+.checkbox02::before {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 16px;
+  left: 5px;
+  margin-top: -8px;
+  position: absolute;
+  top: 50%;
+  width: 16px;
+}
+.checkbox02::after {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  z-index: -1;
+  /*
+  border-right: 6px solid #00cccc;
+  border-bottom: 3px solid #00cccc;
+  height: 20px;
+  left: 7px;
+  margin-top: -16px;
+  top: 50%;
+  transform: rotate(45deg);
+  width: 9px;
+  */
+  background-image: url("checked.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  content: '';
+  display: block;
+  opacity: 0;
+}
+input[type=checkbox]:checked + .checkbox02::before {
+  border-color: #666;
+  opacity: 0;
+}
+input[type=checkbox]:checked + .checkbox02::after {
+  opacity: 1;
+}
+label {
+  font-size: 70%;
+}
+a {
+  color: gray !important;
+}
+#main a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+.reference {
+  margin: .8em;
+}
+
+.credit {
+  margin: .8em;
+}
